@@ -1,14 +1,134 @@
 <!DOCTYPE html>
-<html lang='fr'>
-<head><meta charset='UTF-8'><title>Épreuve E6</title></head>
-<body><h1>Épreuve E6</h1><p>Compétences professionnelles et cybersécurité.</p></body>
-
-<div style="text-align: center; margin: 2em 0;"></div>
-    <a href="index.html" style="background-color: #2563eb; color: #fff; padding: 0.5em 1.5em; border-radius: 0.375em; text-decoration: none; transition: background 0.2s;">
-        Retour à l'accueil
-    </a>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épreuve E6 SISR – Adyan Jeffali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><nav>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="index.html">Adyan <span>Jeffali</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="bts-sio.html" >BTS SIO</a></li>
+      <li><a href="experiences.html" >Entreprise</a></li>
+      <li><a href="e5.html" >Épreuve E5</a></li>
+      <li><a href="e6.html" class="active">Épreuve E6</a></li>
+      <li><a href="veille.html" >Veille Techno</a></li>
+      <li><a href="projet.html" >Projet perso</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Épreuve E6 – SISR</span>
+    <h1>Administration des systèmes et des réseaux</h1>
+    <p>Deux réalisations professionnelles sur infrastructure réseau et ITSM</p>
+  </div>
 </div>
 
+<main>
 
+  <section style="margin-bottom:2rem">
+    <p class="label">Objectifs de l'épreuve</p>
+    <div class="card">
+      <p>L'épreuve E6 option SISR s'appuie sur deux réalisations professionnelles. Elle évalue les compétences du bloc « Administration des systèmes et des réseaux » et prend la forme d'une épreuve pratique et orale de 40 minutes (+ 1h30 de préparation).</p>
+      <ul class="missions" style="margin-top:.5rem">
+        <li>Concevoir une solution d'infrastructure réseau</li>
+        <li>Installer, tester et déployer une solution d'infrastructure réseau</li>
+        <li>Exploiter, dépanner et superviser une infrastructure réseau</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="margin-bottom:2rem">
+    <p class="label">Projet 1 — Installation et configuration d'un annuaire Active Directory</p>
+    <div class="sp-card">
+      <div class="sp-body">
+        <p>La M2L (Maison des Ligues) accompagne diverses ligues sportives régionales. Pour centraliser et sécuriser la gestion des accès, nous avons déployé un annuaire LDAP sous Windows Server 2022. Chaque collaborateur s'authentifie pour accéder aux ressources appropriées à son profil.</p>
+        <p>L'Active Directory est un annuaire LDAP (Lightweight Directory Access Protocol) pour les systèmes Windows. Il centralise deux fonctionnalités essentielles : <strong>l'identification</strong> et <strong>l'authentification</strong> des utilisateurs au sein du SI.</p>
+        <p><strong>Objectifs atteints :</strong></p>
+        <ul class="missions">
+          <li>Garantir la connexion et l'authentification centralisée des utilisateurs</li>
+          <li>Sécuriser les ressources et les accès selon les besoins de chaque profil</li>
+          <li>Assurer la haute disponibilité via une architecture multisite</li>
+          <li>Automatiser les stratégies de sécurité (GPO) sur le parc informatique</li>
+        </ul>
+        <p style="margin-top:.75rem"><strong>Déroulement de l'implémentation :</strong></p>
+        <ul class="missions">
+          <li>Déploiement du rôle Active Directory Domain Services (AD DS) sur Windows Server 2022 Datacenter</li>
+          <li>Mise en service et paramétrage des rôles réseau : DNS et DHCP</li>
+          <li>Création de 7 Unités d'Organisation (UO) représentant les zones de la M2L</li>
+          <li>Intégration des objets du domaine : comptes, postes, groupes de sécurité</li>
+          <li>Élaboration et application des GPO sur le parc</li>
+        </ul>
+        <div class="chips" style="margin-top:.75rem">
+          <span class="chip">Windows Server 2022</span>
+          <span class="chip">Active Directory</span>
+          <span class="chip">DNS</span>
+          <span class="chip">DHCP</span>
+          <span class="chip">GPO</span>
+          <span class="chip">Proxmox</span>
+          <span class="chip">Cisco 4300</span>
+        </div>
+        <div style="margin-top:.75rem">
+          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📄 Fiche situation professionnelle</a>
+          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📁 Documentation technique</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:2rem">
+    <p class="label">Projet 2 — Déploiement de la solution ITSM GLPI</p>
+    <div class="sp-card">
+      <div class="sp-body">
+        <p>La M2L souhaitait mettre en œuvre une solution de gestion du parc informatique et de résolution d'incidents. GLPI (Gestionnaire Libre de Parc Informatique) est une application web permettant la gestion des actifs, des incidents et des demandes d'assistance.</p>
+        <p><strong>Objectifs atteints :</strong></p>
+        <ul class="missions">
+          <li>Permettre aux utilisateurs de créer, modifier et suivre leurs tickets d'assistance</li>
+          <li>Structurer le processus de prise en charge et résolution des incidents</li>
+          <li>Assurer l'inventaire automatisé du parc via OCS Inventory couplé à GLPI</li>
+          <li>Synchroniser GLPI avec l'Active Directory pour l'authentification LDAP</li>
+        </ul>
+        <p style="margin-top:.75rem"><strong>Phases de déploiement :</strong></p>
+        <ul class="missions">
+          <li><strong>Phase 1 — Environnement LAMP :</strong> installation Apache2, PHP, MariaDB sur Debian</li>
+          <li><strong>Phase 2 — Paramétrage GLPI :</strong> création des entités, configuration de la remontée d'inventaire OCS</li>
+          <li><strong>Phase 3 — Synchronisation AD :</strong> interfaçage GLPI avec le contrôleur de domaine, authentification LDAP</li>
+        </ul>
+        <div class="chips" style="margin-top:.75rem">
+          <span class="chip">GLPI</span>
+          <span class="chip">OCS Inventory</span>
+          <span class="chip">Debian Linux</span>
+          <span class="chip">LAMP</span>
+          <span class="chip">LDAP</span>
+          <span class="chip">pfSense</span>
+          <span class="chip">Proxmox</span>
+        </div>
+        <div style="margin-top:.75rem">
+          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📄 Fiche situation professionnelle</a>
+          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📁 Documentation technique</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Compétences mobilisées</p>
+    <div class="comp-grid">
+      <div class="comp-item">Concevoir une solution d'infrastructure réseau</div>
+      <div class="comp-item">Installer et déployer une solution réseau</div>
+      <div class="comp-item">Exploiter et superviser l'infrastructure</div>
+      <div class="comp-item">Dépanner une infrastructure réseau</div>
+      <div class="comp-item">Gestion des identités (AD/LDAP)</div>
+      <div class="comp-item">Administration système Linux/Windows</div>
+    </div>
+  </section>
+
+</main>
+<footer>© 2025 – Portfolio BTS SIO SISR – Adyan Jeffali</footer>
+</body>
 </html>
-

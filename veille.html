@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html lang='fr'>
-<head><meta charset='UTF-8'><title>Veille Technologique</title></head>
-<body><h1>Veille technologique</h1><p>Sujet de veille ici.</p></body>
-
-<div style="text-align: center; margin: 2em 0;"></div>
-    <a href="index.html" style="background-color: #2563eb; color: #fff; padding: 0.5em 1.5em; border-radius: 0.375em; text-decoration: none; transition: background 0.2s;">
-        Retour à l'accueil
-    </a>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique – Adyan Jeffali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><nav>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="index.html">Adyan <span>Jeffali</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="bts-sio.html" >BTS SIO</a></li>
+      <li><a href="experiences.html" >Entreprise</a></li>
+      <li><a href="e5.html" >Épreuve E5</a></li>
+      <li><a href="e6.html" >Épreuve E6</a></li>
+      <li><a href="veille.html" class="active">Veille Techno</a></li>
+      <li><a href="projet.html" >Projet perso</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Veille Technologique</span>
+    <h1>Cybersécurité — Évolution des menaces et pratiques défensives</h1>
+    <p>Suivi des dernières actualités dans le domaine de la sécurité informatique</p>
+  </div>
 </div>
 
+<main>
 
+  <section style="margin-bottom:2rem">
+    <p class="label">Démarche de veille</p>
+    <div class="card">
+      <p>La cybersécurité est au cœur de mon projet professionnel en option SISR. Ma veille porte sur l'évolution des cybermenaces (ransomwares, attaques sur les infrastructures) et les nouvelles pratiques défensives (Zero Trust, EDR, SIEM). Je m'appuie principalement sur des sources officielles (ANSSI), des médias spécialisés et ma pratique régulière de CTF qui me permet de comprendre les techniques d'attaque pour mieux les contrer.</p>
+    </div>
+  </section>
+
+  <section style="margin-bottom:2rem">
+    <p class="label">Articles suivis</p>
+
+    <div class="veille-item">
+      <span class="vi-date">2025</span>
+      <div class="vi-body">
+        <h4>Montée en puissance des ransomwares-as-a-service (RaaS)</h4>
+        <p>Les groupes cybercriminels proposent désormais des kits de ransomware clé en main, accessibles même sans compétences techniques. Cette démocratisation des outils d'attaque augmente le nombre d'incidents touchant PME et collectivités. Les solutions de sauvegarde hors ligne et la segmentation réseau deviennent des réponses critiques.</p>
+        <div class="chips" style="margin-top:.5rem"><span class="chip">Ransomware</span><span class="chip">RaaS</span><span class="chip">Sauvegarde</span></div>
+        <a href="https://www.cert.ssi.gouv.fr/" target="_blank">→ Source : CERT-FR / ANSSI</a>
+      </div>
+    </div>
+
+    <div class="veille-item">
+      <span class="vi-date">2024–2025</span>
+      <div class="vi-body">
+        <h4>Zero Trust : vers une sécurité sans périmètre</h4>
+        <p>Le modèle Zero Trust ("ne jamais faire confiance, toujours vérifier") s'impose face à la généralisation du cloud et du télétravail. Il repose sur une authentification forte, une micro-segmentation et un contrôle permanent des accès — même sur le réseau interne. Directement lié à mes apprentissages sur Active Directory et la gestion des GPO.</p>
+        <div class="chips" style="margin-top:.5rem"><span class="chip">Zero Trust</span><span class="chip">IAM</span><span class="chip">MFA</span><span class="chip">Micro-segmentation</span></div>
+        <a href="https://www.ssi.gouv.fr/guide/le-modele-zero-trust/" target="_blank">→ Source : ANSSI – Guide Zero Trust</a>
+      </div>
+    </div>
+
+    <div class="veille-item">
+      <span class="vi-date">2024</span>
+      <div class="vi-body">
+        <h4>Vulnérabilités critiques dans les équipements réseau (Cisco, Fortinet)</h4>
+        <p>De nombreuses CVE critiques ont été découvertes sur des équipements Cisco et Fortinet en 2024. Ces failles soulignent l'importance des mises à jour régulières des firmwares et de la segmentation réseau. En formation, j'ai travaillé sur des équipements Cisco (routeurs 4300, switches Catalyst 2960G), ce qui me sensibilise directement à ces enjeux.</p>
+        <div class="chips" style="margin-top:.5rem"><span class="chip">CVE</span><span class="chip">Cisco</span><span class="chip">Firmware</span><span class="chip">Patch management</span></div>
+        <a href="https://nvd.nist.gov/" target="_blank">→ Source : NVD – National Vulnerability Database</a>
+      </div>
+    </div>
+
+    <div class="veille-item">
+      <span class="vi-date">2024</span>
+      <div class="vi-body">
+        <h4>L'IA au service de la cyberdéfense : EDR et SIEM nouvelle génération</h4>
+        <p>Les outils de détection basés sur l'intelligence artificielle (EDR, SIEM enrichis par ML) permettent d'analyser des volumes massifs de logs et de détecter des comportements anormaux en temps réel. Les SOC s'appuient de plus en plus sur ces technologies pour réduire les délais de réponse aux incidents.</p>
+        <div class="chips" style="margin-top:.5rem"><span class="chip">IA</span><span class="chip">EDR</span><span class="chip">SIEM</span><span class="chip">SOC</span><span class="chip">Machine Learning</span></div>
+        <a href="https://thehackernews.com/" target="_blank">→ Source : The Hacker News</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <p class="label">Sources utilisées</p>
+    <div class="sources-grid">
+      <div class="source-card"><div class="source-name">ANSSI / CERT-FR</div><div class="source-desc">Alertes et bulletins officiels de sécurité français</div></div>
+      <div class="source-card"><div class="source-name">The Hacker News</div><div class="source-desc">Actualités cybersécurité mondiales, CVE, incidents</div></div>
+      <div class="source-card"><div class="source-name">CVE Mitre / NVD</div><div class="source-desc">Base officielle des vulnérabilités connues</div></div>
+      <div class="source-card"><div class="source-name">TryHackMe Blog</div><div class="source-desc">Techniques d'attaque et de défense (CTF)</div></div>
+      <div class="source-card"><div class="source-name">Zataz</div><div class="source-desc">Actualité cybercriminalité francophone</div></div>
+      <div class="source-card"><div class="source-name">Reddit r/netsec</div><div class="source-desc">Communauté professionnels sécurité réseau</div></div>
+    </div>
+  </section>
+
+</main>
+<footer>© 2025 – Portfolio BTS SIO SISR – Adyan Jeffali</footer>
+</body>
 </html>

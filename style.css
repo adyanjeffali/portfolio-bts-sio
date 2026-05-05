@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #f5f3ef;
+  --surface:  #ffffff;
+  --border:   #e0ddd7;
+  --text:     #18181b;
+  --muted:    #71717a;
+  --accent:   #2563eb;
+  --accent2:  #1d4ed8;
+  --light:    #eff6ff;
+  --dark:     #1e3a8a;
+  --radius:   12px;
+  --shadow:   0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 15px; line-height: 1.6; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-wrap {
+  max-width: 1060px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; height: 58px;
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+  color: var(--text); text-decoration: none; letter-spacing: -.03em;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: .15rem; list-style: none; }
+.nav-links a {
+  display: block; text-decoration: none; font-size: .82rem; font-weight: 500;
+  color: var(--muted); padding: .4rem .75rem; border-radius: 8px; transition: all .15s;
+}
+.nav-links a:hover { color: var(--accent); background: var(--light); }
+.nav-links a.active { color: var(--accent); background: var(--light); font-weight: 600; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 3.5rem 1.5rem 3rem;
+}
+.hero-inner { max-width: 1060px; margin: 0 auto; display: flex; gap: 2.5rem; align-items: center; }
+.avatar {
+  width: 88px; height: 88px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--dark), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; color: #fff;
+  letter-spacing: -.04em;
+}
+.hero-text h1 {
+  font-family: 'Syne', sans-serif; font-size: 2.1rem; font-weight: 800;
+  letter-spacing: -.05em; line-height: 1.05; color: var(--text);
+}
+.hero-text h1 em { color: var(--accent); font-style: normal; }
+.hero-sub { color: var(--muted); margin-top: .45rem; font-size: .95rem; }
+.hero-meta { margin-top: .5rem; font-size: .8rem; color: var(--muted); font-family: monospace; }
+.badge {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: var(--light); color: var(--accent); border: 1px solid #bfdbfe;
+  font-size: .75rem; font-weight: 600; padding: .25rem .75rem; border-radius: 20px; margin-top: .8rem;
+}
+
+/* ── PAGE HEADER (inner pages) ── */
+.page-hero {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 2.5rem 1.5rem 2rem;
+}
+.page-hero-inner { max-width: 1060px; margin: 0 auto; }
+.eyebrow {
+  display: inline-block; background: var(--accent); color: #fff;
+  font-family: 'Syne', sans-serif; font-size: .68rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .22rem .7rem; border-radius: 5px; margin-bottom: .75rem;
+}
+.page-hero h1 {
+  font-family: 'Syne', sans-serif; font-size: 1.65rem; font-weight: 800;
+  letter-spacing: -.04em; line-height: 1.15;
+}
+.page-hero p { color: var(--muted); margin-top: .4rem; font-size: .9rem; }
+
+/* ── MAIN WRAPPER ── */
+main { max-width: 1060px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+/* ── SECTION LABEL ── */
+.label {
+  font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: .9rem; padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow); margin-bottom: 1rem;
+}
+.card + .card { margin-top: 0; }
+.card h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: .3rem; }
+.card p { font-size: .88rem; color: #3f3f46; line-height: 1.7; }
+
+/* ── CHIPS / TAGS ── */
+.chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .65rem; }
+.chip {
+  font-size: .72rem; font-weight: 500; padding: .2rem .55rem; border-radius: 5px;
+  font-family: monospace; background: var(--light); color: var(--accent);
+}
+.chip.gray { background: #f4f4f5; color: #52525b; }
+.chip.green { background: #f0fdf4; color: #15803d; }
+.chip.orange { background: #fff7ed; color: #c2410c; }
+
+/* ── SKILLS GRID ── */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px,1fr)); gap: .8rem; }
+.skill-block {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.1rem 1.2rem;
+}
+.skill-block .sk-label {
+  font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); margin-bottom: .55rem;
+}
+
+/* ── EXPERIENCE CARD ── */
+.exp-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.4rem 1.6rem; box-shadow: var(--shadow); margin-bottom: 1.1rem;
+}
+.exp-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.exp-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.02rem; }
+.exp-company { color: var(--accent); font-size: .88rem; font-weight: 500; margin-top: .1rem; }
+.exp-period {
+  font-size: .75rem; color: var(--muted); font-family: monospace;
+  background: var(--bg); border: 1px solid var(--border);
+  padding: .22rem .6rem; border-radius: 6px; white-space: nowrap;
+}
+.exp-desc { font-size: .87rem; color: #3f3f46; line-height: 1.7; }
+.missions { list-style: none; margin-top: .5rem; display: grid; gap: .3rem; }
+.missions li { font-size: .87rem; padding-left: 1.1rem; position: relative; color: #3f3f46; line-height: 1.55; }
+.missions li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: .75rem; top: .06rem; }
+
+/* ── INFO ROW ── */
+.info-row { display: flex; gap: .9rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.info-item {
+  flex: 1; min-width: 170px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem 1.2rem;
+}
+.info-item .il { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.info-item .iv { font-size: .95rem; font-weight: 600; margin-top: .25rem; }
+.info-item .is { font-size: .78rem; color: var(--muted); margin-top: .1rem; }
+
+/* ── PROJECT ── */
+.proj-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.4rem 1.6rem; box-shadow: var(--shadow); margin-bottom: 1.1rem;
+}
+.proj-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.proj-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.02rem; }
+.status-badge { font-size: .7rem; font-weight: 700; padding: .22rem .6rem; border-radius: 20px; }
+.status-badge.done { background: #f0fdf4; color: #15803d; }
+.status-badge.wip  { background: #fff7ed; color: #c2410c; }
+.status-badge.active { background: var(--light); color: var(--accent); }
+
+/* ── VEILLE ── */
+.veille-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow); margin-bottom: .9rem;
+  display: flex; gap: 1.2rem;
+}
+.vi-date {
+  font-size: .7rem; font-family: monospace; color: var(--muted);
+  background: var(--bg); border: 1px solid var(--border); padding: .2rem .5rem;
+  border-radius: 5px; white-space: nowrap; height: fit-content; margin-top: .2rem;
+}
+.vi-body h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: .95rem; margin-bottom: .3rem; }
+.vi-body p { font-size: .86rem; color: #3f3f46; line-height: 1.65; }
+.vi-body a { color: var(--accent); font-size: .82rem; font-weight: 500; text-decoration: none; display: inline-block; margin-top: .5rem; }
+.vi-body a:hover { text-decoration: underline; }
+
+/* ── E-PREUVES ── */
+.sp-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem 1.6rem; box-shadow: var(--shadow); margin-bottom: 1.2rem;
+}
+.sp-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: .7rem; }
+.sp-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.02rem; }
+.sp-ctx { font-size: .75rem; color: var(--muted); font-family: monospace; background: var(--bg); border: 1px solid var(--border); padding: .22rem .6rem; border-radius: 6px; white-space: nowrap; }
+.sp-body p { font-size: .87rem; color: #3f3f46; line-height: 1.7; margin-bottom: .5rem; }
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px,1fr)); gap: .65rem; margin-top: .5rem; }
+.comp-item { background: var(--light); border: 1px solid #bfdbfe; border-radius: 8px; padding: .7rem 1rem; font-size: .82rem; font-weight: 500; color: var(--accent); }
+
+/* ── DOC LINK BUTTON ── */
+.doc-link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--accent); color: #fff; text-decoration: none;
+  font-size: .82rem; font-weight: 600; padding: .5rem 1.1rem;
+  border-radius: 8px; transition: background .15s; margin-top: .75rem; margin-right: .5rem;
+}
+.doc-link:hover { background: var(--accent2); }
+.doc-link.outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+.doc-link.outline:hover { background: var(--light); }
+
+/* ── SOURCES GRID ── */
+.sources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px,1fr)); gap: .75rem; }
+.source-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; }
+.source-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: .9rem; }
+.source-desc { font-size: .78rem; color: var(--muted); margin-top: .25rem; line-height: 1.4; }
+
+footer {
+  border-top: 1px solid var(--border); padding: 1.5rem;
+  text-align: center; color: var(--muted); font-size: .78rem;
+}

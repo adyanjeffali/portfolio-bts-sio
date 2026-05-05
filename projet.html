@@ -1,12 +1,107 @@
 <!DOCTYPE html>
-<html lang='fr'>
-<head><meta charset='UTF-8'><title>Projet Personnel</title></head>
-<body><h1>Mon projet personnel</h1><p>Description du projet personnel ici.</p></body>
-
-<div style="text-align: center; margin: 2em 0;"></div>
-    <a href="index.html" style="background-color: #2563eb; color: #fff; padding: 0.5em 1.5em; border-radius: 0.375em; text-decoration: none; transition: background 0.2s;">
-        Retour à l'accueil
-    </a>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Personnel – Adyan Jeffali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><nav>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="index.html">Adyan <span>Jeffali</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="bts-sio.html" >BTS SIO</a></li>
+      <li><a href="experiences.html" >Entreprise</a></li>
+      <li><a href="e5.html" >Épreuve E5</a></li>
+      <li><a href="e6.html" >Épreuve E6</a></li>
+      <li><a href="veille.html" >Veille Techno</a></li>
+      <li><a href="projet.html" class="active">Projet perso</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Projets personnels</span>
+    <h1>Réalisations techniques personnelles</h1>
+    <p>Projets menés en dehors du cadre scolaire pour approfondir mes compétences</p>
+  </div>
 </div>
 
+<main>
+  <p class="label">Projets</p>
+
+  <div class="proj-card">
+    <div class="proj-head">
+      <div class="proj-title">Infrastructure réseau personnelle (Home Lab)</div>
+      <span class="status-badge done">✓ Réalisé</span>
+    </div>
+    <p class="exp-desc">Mise en place d'un lab réseau à domicile pour expérimenter des scénarios d'administration système et réseau en conditions réelles. Ce projet m'a permis de pratiquer concrètement ce que j'apprends en formation.</p>
+    <ul class="missions" style="margin-top:.5rem">
+      <li>Déploiement de machines virtuelles sous VMware (Linux Debian, Windows Server)</li>
+      <li>Configuration d'un serveur DHCP, DNS local et firewall (pfSense)</li>
+      <li>Mise en place d'une segmentation réseau (VLAN)</li>
+      <li>Tests de sécurité et d'inventaire avec Nmap</li>
+      <li>Surveillance réseau et analyse de trames (Wireshark)</li>
+    </ul>
+    <div class="chips" style="margin-top:.65rem">
+      <span class="chip">VMware</span>
+      <span class="chip">Linux/Debian</span>
+      <span class="chip">pfSense</span>
+      <span class="chip">DHCP</span>
+      <span class="chip">VLAN</span>
+      <span class="chip">Nmap</span>
+      <span class="chip">Wireshark</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-head">
+      <div class="proj-title">Site e-commerce</div>
+      <span class="status-badge wip">⏳ En cours</span>
+    </div>
+    <p class="exp-desc">Développement d'un site e-commerce complet, de la conception à la mise en production. Ce projet vise à consolider mes compétences en développement web full-stack et en déploiement sur serveur Linux.</p>
+    <ul class="missions" style="margin-top:.5rem">
+      <li>Conception de la base de données MySQL (produits, commandes, utilisateurs)</li>
+      <li>Développement du back-end en Python</li>
+      <li>Interface utilisateur en HTML/CSS/JavaScript</li>
+      <li>Gestion des sessions et authentification sécurisée</li>
+      <li>Hébergement et déploiement sur serveur Linux</li>
+    </ul>
+    <div class="chips" style="margin-top:.65rem">
+      <span class="chip">HTML/CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Python</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">Linux</span>
+      <span class="chip orange">En cours</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-head">
+      <div class="proj-title">CTF &amp; Cybersécurité — Pratique offensive/défensive</div>
+      <span class="status-badge active">↻ Pratique régulière</span>
+    </div>
+    <p class="exp-desc">Entraînement régulier sur des plateformes CTF pour développer mes compétences en cybersécurité. Ces exercices couvrent l'exploitation web, la cryptographie, le forensics et le reverse engineering.</p>
+    <ul class="missions" style="margin-top:.5rem">
+      <li>Résolution de challenges sur TryHackMe et HackTheBox</li>
+      <li>Pratique sur RootMe (Web, Réseau, Cryptographie)</li>
+      <li>Formation Ethical Hacking via HackerX</li>
+      <li>Techniques : énumération, exploitation de vulnérabilités, escalade de privilèges</li>
+    </ul>
+    <div class="chips" style="margin-top:.65rem">
+      <span class="chip">TryHackMe</span>
+      <span class="chip">HackTheBox</span>
+      <span class="chip">RootMe</span>
+      <span class="chip">HackerX</span>
+      <span class="chip green">CTF</span>
+      <span class="chip green">Ethical Hacking</span>
+    </div>
+  </div>
+
+</main>
+<footer>© 2025 – Portfolio BTS SIO SISR – Adyan Jeffali</footer>
+</body>
 </html>

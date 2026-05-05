@@ -2,66 +2,126 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Adyan Jeffali - Portfolio BTS SIO SISR</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio BTS SIO SISR – Adyan Jeffali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <header class="bg-blue-800 text-white py-6 px-4 text-center">
-    <h1 class="text-3xl font-bold">Adyan JEFFALI</h1>
-    <p>Alternant Administrateur Réseaux & Cybersécurité</p>
-    <p class="text-sm mt-1">adyan.jeffali@efrei.net • Thiais, Île-de-France • 0661149050</p>
-  </header>
-
-  <nav class="bg-blue-600 text-white py-3">
-  <ul class="flex justify-center space-x-6 text-sm">
-    <li><a href="index.html" class="hover:underline">Accueil</a></li>
-    <li><a href="experiences.html" class="hover:underline">Expériences</a></li>
-    <li><a href="projet.html" class="hover:underline">Projet perso</a></li>
-    <li><a href="veille.html" class="hover:underline">Veille techno</a></li>
-    <li><a href="e4.html" class="hover:underline">Épreuve E4</a></li>
-    <li><a href="e5.html" class="hover:underline">Épreuve E5</a></li>
-    <li><a href="e6.html" class="hover:underline">Épreuve E6</a></li>
-  </ul>
+<body><nav>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="index.html">Adyan <span>Jeffali</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="bts-sio.html" >BTS SIO</a></li>
+      <li><a href="experiences.html" >Entreprise</a></li>
+      <li><a href="e5.html" >Épreuve E5</a></li>
+      <li><a href="e6.html" >Épreuve E6</a></li>
+      <li><a href="veille.html" >Veille Techno</a></li>
+      <li><a href="projet.html" >Projet perso</a></li>
+    </ul>
+  </div>
 </nav>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="avatar">AJ</div>
+    <div class="hero-text">
+      <h1>Adyan <em>Jeffali</em></h1>
+      <p class="hero-sub">Étudiant BTS SIO option SISR — Administrateur Réseaux &amp; Cybersécurité</p>
+      <p class="hero-meta">adyan.jeffali@efrei.net · Thiais, Île-de-France · 06 61 14 90 50</p>
+      <span class="badge">🔍 Recherche alternance — septembre 2025</span>
+    </div>
+  </div>
+</div>
 
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+<main>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">À propos de moi</h2>
-      <p>Étudiant en BTS Services Informatiques aux Organisations (SIO) option SISR, passionné par l’administration système et la sécurité des réseaux. Je suis à la recherche d'une alternance à partir de septembre 2025 pour approfondir mes compétences en virtualisation, cybersécurité et déploiement d'infrastructures informatiques.</p>
-    </section>
+  <section style="margin-bottom:2.2rem">
+    <p class="label">À propos</p>
+    <div class="card">
+      <p>Étudiant en BTS SIO option SISR à l'EFREI Paris, je suis passionné par l'administration système, la sécurité des réseaux et la cybersécurité. J'ai acquis une expérience concrète en stage et m'entraîne régulièrement sur des plateformes CTF (TryHackMe, HackTheBox, RootMe). Je recherche une alternance à partir de septembre 2025, au rythme 3 jours entreprise / 2 jours école, depuis Thiais (Île-de-France).</p>
+    </div>
+  </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Compétences clés</h2>
-      <ul class="list-disc list-inside">
-        <li><strong>Administration système :</strong> Linux/Debian, VMware, LAN/WAN, DHCP, firewall, Nmap</li>
-        <li><strong>Programmation & bases de données :</strong> HTML, CSS, JS, SQL/MySQL, Python, Java (notions)</li>
-        <li><strong>Cybersécurité & veille :</strong> CTF TryHackMe, HackTheBox, RootMe, HackerX</li>
-        <li><strong>Soft Skills :</strong> Organisation, autonomie, travail en équipe, veille technologique</li>
-      </ul>
-    </section>
+  <section style="margin-bottom:2.2rem">
+    <p class="label">Compétences</p>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <div class="sk-label">Systèmes &amp; Réseaux</div>
+        <div class="chips">
+          <span class="chip">Linux/Debian</span>
+          <span class="chip">Windows Server</span>
+          <span class="chip">VMware</span>
+          <span class="chip">Proxmox</span>
+          <span class="chip">DHCP</span>
+          <span class="chip">DNS</span>
+          <span class="chip">Firewall</span>
+          <span class="chip">LAN/WAN</span>
+          <span class="chip">Nmap</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="sk-label">Développement</div>
+        <div class="chips">
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL/MySQL</span>
+          <span class="chip gray">Java (notions)</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="sk-label">Cybersécurité</div>
+        <div class="chips">
+          <span class="chip">TryHackMe</span>
+          <span class="chip">HackTheBox</span>
+          <span class="chip">RootMe</span>
+          <span class="chip">HackerX</span>
+          <span class="chip green">CTF</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="sk-label">Soft Skills</div>
+        <div class="chips">
+          <span class="chip gray">Autonomie</span>
+          <span class="chip gray">Organisation</span>
+          <span class="chip gray">Travail en équipe</span>
+          <span class="chip gray">Veille techno</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Formation & Certifications</h2>
-      <ul class="list-disc list-inside">
-        <li>BTS SIO (2024 – 2026) – EFREI Paris</li>
-        <li>Certification CISCO CCST Cybersécurité (en cours)</li>
-        <li>Hacker X – Formation en ethical hacking</li>
-      </ul>
-    </section>
+  <section style="margin-bottom:2.2rem">
+    <p class="label">Formation &amp; Certifications</p>
+    <div class="info-row">
+      <div class="info-item">
+        <div class="il">Formation</div>
+        <div class="iv">BTS SIO – SISR</div>
+        <div class="is">EFREI Paris · 2024 – 2026</div>
+      </div>
+      <div class="info-item">
+        <div class="il">Certification</div>
+        <div class="iv">CISCO CCST Cybersécurité</div>
+        <div class="is">En cours d'obtention</div>
+      </div>
+      <div class="info-item">
+        <div class="il">Ethical Hacking</div>
+        <div class="iv">HackerX</div>
+        <div class="is">Formation complète</div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-700 mb-2">Disponibilité</h2>
-      <p>Rythme : 3 jours entreprise / 2 jours école</p>
-      <p>Début d'alternance : septembre 2025</p>
-    </section>
+  <section>
+    <p class="label">Disponibilité</p>
+    <div class="card" style="display:flex;gap:2.5rem;flex-wrap:wrap;align-items:center;">
+      <div><div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Rythme</div><div style="font-size:.95rem;font-weight:600;margin-top:.2rem;">3j entreprise / 2j école</div></div>
+      <div><div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Début</div><div style="font-size:.95rem;font-weight:600;margin-top:.2rem;">Septembre 2025</div></div>
+      <div><div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Localisation</div><div style="font-size:.95rem;font-weight:600;margin-top:.2rem;">Thiais – Île-de-France</div></div>
+    </div>
+  </section>
 
-  </main>
-
-  <footer class="bg-gray-200 text-center py-6">
-    <p class="text-sm">&copy; 2025 - Portfolio BTS SIO - Adyan Jeffali</p>
-  </footer>
-
+</main>
+<footer>© 2025 – Portfolio BTS SIO SISR – Adyan Jeffali</footer>
 </body>
 </html>

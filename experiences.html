@@ -1,64 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Expériences Professionnelles</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entreprise – Adyan Jeffali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-700 text-white p-6">
-        <h1 class="text-3xl font-bold">Mes expériences professionnelles</h1>
-    </header>
-
-    <main class="p-6 space-y-8">
-
-        <section class="bg-white p-4 shadow rounded">
-            <h2 class="text-xl font-semibold">Technicien informatique – Nawfel Corporation</h2>
-            <p><strong>Période :</strong> mai 2025 – aujourd’hui (1 mois)</p>
-            <p><strong>Lieu :</strong> Marseille, Provence-Alpes-Côte d’Azur – Sur site</p>
-            <p class="mt-2">En stage au sein du service informatique, je contribue au bon fonctionnement du parc informatique en intervenant sur l’installation, la maintenance et le support des équipements informatiques. Mes missions sont réalisées dans un environnement mixte Windows/Linux, en lien direct avec les utilisateurs.</p>
-            <ul class="list-disc list-inside mt-2">
-                <li>Installation, configuration et maintenance des postes de travail (Windows 10/11, Linux)</li>
-                <li>Support utilisateur de niveau 1 : diagnostic, résolution des incidents courants</li>
-                <li>Gestion des tickets via l’outil OTRS</li>
-                <li>Inventaire du parc et gestion des stocks</li>
-            </ul>
-            <p class="mt-2"><strong>Environnement technique :</strong> Windows, Linux, Microsoft 365, OTRS</p>
-            <p><strong>Compétences :</strong> Administration de postes, notions réseau, rigueur, autonomie</p>
-        </section>
-
-        <section class="bg-white p-4 shadow rounded">
-            <h2 class="text-xl font-semibold">Stagiaire Architecte IP plateforme – TECH-IN CONSULTING</h2>
-            <p><strong>Période :</strong> sept. 2024 – oct. 2024 (2 mois)</p>
-            <p><strong>Lieu :</strong> Paris – Hybride</p>
-            <p class="mt-2">Stage aux côtés d’un architecte IP Platform freelance pour Bouygues Telecom :</p>
-            <ul class="list-disc list-inside mt-2">
-                <li>Analyse et gestion de la matrice des flux</li>
-                <li>Architecture réseau IP et processus de déploiement (Internet, téléphonie, IPTV)</li>
-                <li>Configuration de routeurs et switches</li>
-            </ul>
-            <p class="mt-2"><strong>Compétences :</strong> Équipements réseaux, polyvalence, architecture réseau</p>
-        </section>
-
-        <section class="bg-white p-4 shadow rounded">
-            <h2 class="text-xl font-semibold">Immersion – Sauvegarde de données – OPSICLOUD</h2>
-            <p><strong>Période :</strong> juil. 2023 (1 mois)</p>
-            <p><strong>Lieu :</strong> Bagneux, Île-de-France – Sur site</p>
-            <p class="mt-2">Découverte du secteur de la sauvegarde des données : gestion, sécurisation et méthodes de récupération.</p>
-            <p class="mt-2"><strong>Compétences :</strong> Sauvegarde de données, protection de l’information, compréhension des risques</p>
-        </section>
-
-    </main>
-
-<div class="w-full flex justify-start p-6">
-    <a href="index.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition font-medium">
-        ← Retour à l'accueil
-    </a>
-</div>
+<body><nav>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="index.html">Adyan <span>Jeffali</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="bts-sio.html" >BTS SIO</a></li>
+      <li><a href="experiences.html" class="active">Entreprise</a></li>
+      <li><a href="e5.html" >Épreuve E5</a></li>
+      <li><a href="e6.html" >Épreuve E6</a></li>
+      <li><a href="veille.html" >Veille Techno</a></li>
+      <li><a href="projet.html" >Projet perso</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Parcours</span>
+    <h1>Expériences en entreprise</h1>
+    <p>Stages et immersions réalisés dans le cadre du BTS SIO SISR</p>
+  </div>
 </div>
 
-    <footer class="bg-gray-200 text-center py-6">
-        <p class="text-sm">© 2025 - Portfolio BTS SIO - Adyan Jeffali</p>
-    </footer>
+<main>
+  <p class="label">Parcours professionnel</p>
+
+  <div class="exp-card">
+    <div class="exp-head">
+      <div>
+        <div class="exp-title">Technicien Informatique</div>
+        <div class="exp-company">Nawfel Corporation</div>
+      </div>
+      <span class="exp-period">mai 2025 – aujourd'hui · Marseille (sur site)</span>
+    </div>
+    <p class="exp-desc">En stage au sein du service informatique, j'interviens sur l'installation, la maintenance et le support des équipements dans un environnement mixte Windows/Linux, en lien direct avec les utilisateurs.</p>
+    <ul class="missions">
+      <li>Installation, configuration et maintenance des postes de travail (Windows 10/11, Linux)</li>
+      <li>Support utilisateur niveau 1 : diagnostic et résolution des incidents courants</li>
+      <li>Gestion des tickets via l'outil OTRS</li>
+      <li>Inventaire du parc matériel et gestion des stocks</li>
+    </ul>
+    <div class="chips">
+      <span class="chip">Windows 10/11</span>
+      <span class="chip">Linux</span>
+      <span class="chip">Microsoft 365</span>
+      <span class="chip">OTRS</span>
+      <span class="chip gray">Support N1</span>
+      <span class="chip gray">Autonomie</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-head">
+      <div>
+        <div class="exp-title">Stagiaire Architecte IP Plateforme</div>
+        <div class="exp-company">TECH-IN CONSULTING – mission Bouygues Telecom</div>
+      </div>
+      <span class="exp-period">sept. 2024 – oct. 2024 · Paris (hybride)</span>
+    </div>
+    <p class="exp-desc">Stage en immersion aux côtés d'un architecte IP Platform freelance intervenant pour Bouygues Telecom. Participation à des travaux d'architecture réseau et de déploiement.</p>
+    <ul class="missions">
+      <li>Analyse et gestion de la matrice des flux réseau</li>
+      <li>Conception de l'architecture réseau IP (Internet, téléphonie, IPTV)</li>
+      <li>Configuration de routeurs et switches Cisco</li>
+      <li>Documentation des processus de déploiement</li>
+    </ul>
+    <div class="chips">
+      <span class="chip">Architecture IP</span>
+      <span class="chip">Routeurs Cisco</span>
+      <span class="chip">Switches</span>
+      <span class="chip">IPTV</span>
+      <span class="chip gray">Polyvalence</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-head">
+      <div>
+        <div class="exp-title">Immersion – Sauvegarde de données</div>
+        <div class="exp-company">OPSICLOUD</div>
+      </div>
+      <span class="exp-period">juil. 2023 · Bagneux, Île-de-France (sur site)</span>
+    </div>
+    <p class="exp-desc">Découverte du secteur de la sauvegarde et de la protection des données : gestion, sécurisation et procédures de récupération en cas d'incident.</p>
+    <ul class="missions">
+      <li>Gestion et organisation des sauvegardes de données</li>
+      <li>Sécurisation des informations sensibles</li>
+      <li>Méthodes de récupération de données après sinistre</li>
+    </ul>
+    <div class="chips">
+      <span class="chip">Sauvegarde</span>
+      <span class="chip">Sécurité données</span>
+      <span class="chip gray">Gestion des risques</span>
+    </div>
+  </div>
+
+</main>
+<footer>© 2025 – Portfolio BTS SIO SISR – Adyan Jeffali</footer>
 </body>
 </html>
