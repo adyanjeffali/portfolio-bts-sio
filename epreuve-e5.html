@@ -22,6 +22,11 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
 .stats{display:flex;justify-content:center;gap:40px;margin-bottom:10px}
 .stat .num{font-size:2rem;font-weight:700;color:#3b82f6;line-height:1}
 .stat .lbl2{font-size:11px;color:#94a3b8;text-transform:uppercase;margin-top:4px}
+.download-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn-download{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#3b82f6;color:#fff;border-radius:8px;font-size:13px;font-weight:600;transition:all .25s;border:1px solid #3b82f6}
+.btn-download:hover{background:#2563eb;border-color:#2563eb;transform:translateY(-2px);box-shadow:0 8px 20px rgba(59,130,246,.25)}
+.btn-download.alt{background:#fff;color:#3b82f6}
+.btn-download.alt:hover{background:#eff6ff;color:#2563eb}
 .comp-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:55px}
 .comp-nav a{padding:7px 15px;border-radius:20px;font-size:12px;color:#64748b;border:1px solid #e2e8f0;transition:all .2s}
 .comp-nav a:hover{background:#3b82f6;color:#fff;border-color:#3b82f6}
@@ -98,7 +103,15 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
     <div class="stats">
       <div class="stat"><div class="num">22</div><div class="lbl2">Comp&eacute;tences</div></div>
       <div class="stat"><div class="num">6</div><div class="lbl2">Cat&eacute;gories</div></div>
-      <div class="stat"><div class="num">3</div><div class="lbl2">Entreprises</div></div>
+      <div class="stat"><div class="num">4</div><div class="lbl2">Entreprises</div></div>
+    </div>
+    <div class="download-row">
+      <a href="Tableau_Synthese_E5_Jeffali_Adyan.xlsx" class="btn-download" download>
+        &#128202; T&eacute;l&eacute;charger le tableau de synth&egrave;se
+      </a>
+      <a href="Adyan_JEFFALI_CV_v2.pdf" class="btn-download alt" download>
+        &#128196; T&eacute;l&eacute;charger le CV
+      </a>
     </div>
   </div>
   <div class="comp-nav">
@@ -130,9 +143,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C2')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C2')">
         <div class="badge"><span class="dot"></span>C2 &middot; Valid&eacute;e</div>
         <h3>Exploitation des référentiels, normes et standards</h3>
-        <p>Structure des entités M2L en arborescence organisée selon les bonnes pratiques GLPI.</p>
+        <p>Structure des entités M2L sur GLPI &amp; matrice de flux réseau Bouygues Telecom — référentiels d'architecture.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Structure entités GLPI — M2L</span>
+          <span class="real">&rarr; GLPI M2L &amp; Matrice de flux Bouygues</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -148,9 +161,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C4')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C4')">
         <div class="badge"><span class="dot"></span>C4 &middot; Valid&eacute;e</div>
         <h3>Vérification des conditions de la continuité d'un service</h3>
-        <p>Supervision de la disponibilité des équipements réseau Kyndryl via SolarWinds NPM.</p>
+        <p>Supervision SolarWinds chez Kyndryl &amp; haute disponibilité des services fixes Bouygues Telecom.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Supervision SolarWinds — Kyndryl</span>
+          <span class="real">&rarr; SolarWinds Kyndryl &amp; Haute dispo Bouygues</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -194,9 +207,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C8')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C8')">
         <div class="badge"><span class="dot"></span>C8 &middot; Valid&eacute;e</div>
         <h3>Traitement des demandes réseau et système</h3>
-        <p>Administration de 8 FortiGate via FortiManager chez Kyndryl — déploiement et migration Fortinet.</p>
+        <p>Administration de 8 FortiGate via FortiManager (Kyndryl) &amp; configuration de routeurs/switches Bouygues Telecom.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; FortiManager — Kyndryl Data Center</span>
+          <span class="real">&rarr; FortiManager Kyndryl &amp; Config routeurs/switches Bouygues</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -259,9 +272,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C13')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C13')">
         <div class="badge"><span class="dot"></span>C13 &middot; Valid&eacute;e</div>
         <h3>Analyse des objectifs et modalités d'organisation d'un projet</h3>
-        <p>Analyse des besoins du Hackathon EFREI — définition des rôles et structuration des tâches.</p>
+        <p>Analyse des besoins du Hackathon EFREI &amp; participation au projet de déploiement réseau IP chez Bouygues Telecom.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Hackathon EFREI — Trello</span>
+          <span class="real">&rarr; Hackathon EFREI &amp; Projet réseau Bouygues</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -425,11 +438,11 @@ const DATA = {
   "C2": {
     badge: "C2 · Validée",
     titre: "Exploitation des référentiels, normes et standards",
-    realisation: "Structure entités GLPI — M2L",
+    realisation: "GLPI M2L & Matrice de flux Bouygues Telecom",
     img: IMG["glpi_ent"],
-    situation: ["8 entités créées : M2L (racine) > Basket, Football, Tennis, Natation, Athlétisme, Handball, Administration", "Application des conventions de nommage officielles GLPI", "Documentation de la structure selon la nomenclature standard"],
-    technos: ["GLPI — module Entités", "Documentation officielle GLPI", "Normes de gestion de parc informatique"],
-    validee: ["Appliquer une structure normalisée", "Respecter les conventions de nommage", "Documenter l\'architecture selon les standards"]
+    situation: ["M2L : 8 entités créées dans GLPI (Basket, Football, Tennis, Natation, Athlétisme, Handball, Administration) selon la nomenclature standard", "Bouygues Telecom (stage sept-oct 2024) : exploitation et mise à jour de la matrice de flux réseau — référentiel d\'architecture définissant les flux autorisés entre équipements et services fixes grand public", "Application des conventions de nommage officielles GLPI et respect des standards d\'architecture IP télécom"],
+    technos: ["GLPI — module Entités, conventions de nommage standardisées", "Matrice de flux Bouygues Telecom — référentiel d\'architecture réseau IP", "Documentation officielle GLPI et bonnes pratiques télécom"],
+    validee: ["Appliquer une structure normalisée (GLPI, matrice de flux)", "Respecter les conventions de nommage et standards", "Exploiter un référentiel d\'architecture en environnement opérateur"]
   },
   "C3": {
     badge: "C3 · Validée",
@@ -443,11 +456,11 @@ const DATA = {
   "C4": {
     badge: "C4 · Validée",
     titre: "Vérification des conditions de la continuité d\'un service",
-    realisation: "Supervision SolarWinds — Kyndryl",
+    realisation: "SolarWinds Kyndryl & Haute disponibilité Bouygues",
     img: IMG["sw_summary"],
-    situation: ["Dashboard SolarWinds — surveillance de Cisco, Juniper, Brocade, ADVA, IBM eServer", "Détection et remontée d\'alertes réseau en temps réel", "Vérification de la disponibilité des nœuds supervisés"],
-    technos: ["SolarWinds Network Performance Monitor (NPM)", "SolarWinds Network Configuration Manager (NCM)", "Équipements : Cisco, Juniper Networks, Brocade, ADVA GmbH"],
-    validee: ["Monitorer la disponibilité des services réseau", "Identifier les incidents en temps réel", "Assurer la continuité opérationnelle du Data Center"]
+    situation: ["Kyndryl : Dashboard SolarWinds — surveillance de Cisco, Juniper, Brocade, ADVA, IBM eServer, détection d\'alertes en temps réel", "Bouygues Telecom (stage sept-oct 2024) : contribution à la haute disponibilité des services fixes grand public — infrastructure IP critique avec exigences de continuité 24/7", "Vérification de la disponibilité des nœuds supervisés et garantie de la continuité opérationnelle"],
+    technos: ["SolarWinds Network Performance Monitor (NPM) et NCM — Kyndryl", "Architecture IP haute disponibilité — Bouygues Telecom services fixes", "Équipements multi-vendor : Cisco, Juniper Networks, Brocade, ADVA"],
+    validee: ["Monitorer la disponibilité des services réseau (Kyndryl)", "Contribuer à la continuité de service sur infrastructure critique (Bouygues)", "Identifier les incidents en temps réel et garantir la disponibilité"]
   },
   "C5": {
     badge: "C5 · Validée",
@@ -479,11 +492,11 @@ const DATA = {
   "C8": {
     badge: "C8 · Validée",
     titre: "Traitement des demandes concernant les services réseau et système",
-    realisation: "FortiManager — Kyndryl Data Center",
+    realisation: "FortiManager Kyndryl & Config routeurs/switches Bouygues",
     img: IMG["forti_dev"],
-    situation: ["Gestion centralisée de 8 FortiGate : CLG666NF0122-ZEO, CLG666NF0132-CON, BRS030_FRNT, BRS050...", "Statuts synchronisés : Auto-update, Synchronized — HA configuré sur 2 dispositifs", "Migration de bout en bout des pare-feu vers Fortinet chez Kyndryl"],
-    technos: ["FortiManager YPA000FTGM01 — v7.6.6", "FortiGate : Fortinet, 8 dispositifs managés, 10 VDOMs", "Cisco, Juniper, Brocade — administration multi-vendor"],
-    validee: ["Administrer les équipements réseau en production", "Déployer des configurations firewall", "Résoudre les incidents réseau en Data Center"]
+    situation: ["Kyndryl : gestion centralisée de 8 FortiGate via FortiManager (CLG666NF0122-ZEO, BRS030_FRNT, etc.) — HA configuré, 10 VDOMs, migration Fortinet", "Bouygues Telecom (stage sept-oct 2024) : configuration de routeurs et switches (VLAN, trunk) pour les services fixes grand public — réponse à des demandes d\'évolution de l\'architecture réseau", "Administration multi-vendor sur infrastructure opérateur télécom"],
+    technos: ["FortiManager YPA000FTGM01 v7.6.6 — FortiGate (8 dispositifs) — Kyndryl", "Routeurs et switches (configuration VLAN, trunk) — Bouygues Telecom", "Multi-vendor : Cisco, Juniper, Brocade, Fortinet"],
+    validee: ["Administrer les équipements réseau en production (Kyndryl)", "Configurer routeurs et switches pour services télécom (Bouygues)", "Traiter les demandes d\'évolution réseau en environnement opérateur"]
   },
   "C9": {
     badge: "C9 · Validée",
@@ -524,11 +537,11 @@ const DATA = {
   "C13": {
     badge: "C13 · Validée",
     titre: "Analyse des objectifs et des modalités d\'organisation d\'un projet",
-    realisation: "Hackathon EFREI — Trello",
+    realisation: "Hackathon EFREI & Projet réseau Bouygues",
     img: IMG["trello"],
-    situation: ["Hackathon BTS : déploiement d\'une infrastructure complète (GLPI + site web + Debian 12)", "Analyse des besoins : \"Pour Adyan, gestion des utilisateurs et des tickets GLPI\"", "5 colonnes Kanban : À faire, En cours, Terminé, Bloquer, Ressource"],
-    technos: ["Trello — gestion de projet Kanban", "GLPI, VMware Workstation Pro 17, Debian 12", "Méthode agile — répartition des rôles en équipe"],
-    validee: ["Analyser les objectifs du projet", "Identifier les rôles et responsabilités", "Structurer l\'organisation du travail"]
+    situation: ["Hackathon EFREI : déploiement d\'une infrastructure complète (GLPI + site web + Debian 12) avec 5 colonnes Kanban — analyse des besoins, identification des rôles", "Bouygues Telecom (stage sept-oct 2024) : participation au projet de déploiement réseau IP des services fixes grand public — analyse des objectifs d\'architecture et contribution à la matrice de flux qui cadre les choix techniques", "Compréhension des modalités d\'organisation projet en environnement opérateur télécom"],
+    technos: ["Trello — gestion de projet Kanban (Hackathon)", "Architecture IP télécom — projet de déploiement Bouygues", "GLPI, VMware Workstation Pro 17, Debian 12 — Hackathon"],
+    validee: ["Analyser les objectifs d\'un projet (Hackathon, Bouygues)", "Identifier les rôles et modalités d\'organisation", "Contribuer au cadrage technique d\'un projet réseau opérateur"]
   },
   "C14": {
     badge: "C14 · Validée",
