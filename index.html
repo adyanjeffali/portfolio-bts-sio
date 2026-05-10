@@ -88,6 +88,22 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 .bts-bloc .nb-comp { display: inline-block; margin-top: 8px; font-size: 11px; color: var(--accent); font-weight: 600; }
 .bts-link-wrap { text-align: center; margin-top: 35px; }
 
+/* TABLEAU DE SYNTHESE E5 */
+.synth-title { font-size: 1.4rem; font-weight: 700; margin: 55px 0 8px; }
+.synth-desc { color: var(--muted); font-size: 14px; margin-bottom: 22px; max-width: 800px; }
+.synth-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+.synth-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.synth-table thead th { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color: white; padding: 14px 14px; text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; }
+.synth-table tbody td { padding: 12px 14px; border-bottom: 1px solid var(--line); color: var(--text); vertical-align: top; }
+.synth-table tbody tr:last-child td { border-bottom: none; }
+.synth-table tbody tr:hover td { background: var(--accent-light); }
+.synth-table .bloc-cell { font-weight: 600; color: var(--accent); white-space: nowrap; font-size: 12px; }
+.synth-table .comp-id { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 2px 8px; border-radius: 5px; font-size: 11px; font-weight: 700; margin-right: 8px; vertical-align: middle; }
+.synth-table .comp-name { font-weight: 500; }
+.synth-table .real-cell { color: var(--text); font-size: 13px; }
+.synth-table .ctx-cell { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.synth-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+
 /* SKILLS */
 #skills { background: white; max-width: none; padding-left: 0; padding-right: 0; }
 .skills-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -181,6 +197,9 @@ footer strong { color: white; }
   .bts-options { grid-template-columns: 1fr; }
   section { padding: 60px 18px; }
   .hero { padding: 50px 18px 70px; }
+  .synth-table { font-size: 11px; }
+  .synth-table thead th, .synth-table tbody td { padding: 8px 8px; }
+  .synth-table .ctx-cell { white-space: normal; }
 }
 </style>
 </head>
@@ -197,6 +216,7 @@ footer strong { color: white; }
     <a href="#projets">Projets</a>
     <a href="#veille">Veille</a>
     <a href="epreuve-e5.html">C1→C22</a>
+    <a href="e6.html">E6</a>
     <a href="#contact" class="nav-cta">Contact</a>
   </div>
 </nav>
@@ -329,6 +349,52 @@ footer strong { color: white; }
       <p>Environnement d'apprentissage, veille, identité pro, projet pro.</p>
       <span class="nb-comp">4 compétences (C19→C22)</span>
     </div>
+  </div>
+
+  <!-- TABLEAU DE SYNTHESE E5 -->
+  <h3 class="synth-title">📊 Tableau de synthèse E5</h3>
+  <p class="synth-desc">Vue d'ensemble : pour chaque compétence, la réalisation associée et le contexte professionnel ou académique. Le détail complet est consultable sur la <a href="epreuve-e5.html" style="color: var(--accent); font-weight: 600;">page C1→C22</a>.</p>
+
+  <div class="synth-wrap">
+    <table class="synth-table">
+      <thead>
+        <tr>
+          <th>Bloc</th>
+          <th>Compétence</th>
+          <th>Réalisation</th>
+          <th>Contexte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="bloc-cell">B2.1 — Patrimoine</td><td><span class="comp-id">C1</span><span class="comp-name">Recenser les ressources</span></td><td class="real-cell">Inventaire GLPI + parc Nawfel</td><td class="ctx-cell">M2L · Nawfel (2025)</td></tr>
+        <tr><td class="bloc-cell">B2.1 — Patrimoine</td><td><span class="comp-id">C2</span><span class="comp-name">Exploiter référentiels</span></td><td class="real-cell">Structure GLPI + matrice de flux IP</td><td class="ctx-cell">M2L · Bouygues (2024)</td></tr>
+        <tr><td class="bloc-cell">B2.1 — Patrimoine</td><td><span class="comp-id">C3</span><span class="comp-name">Vérifier habilitations</span></td><td class="real-cell">Profils & droits GLPI</td><td class="ctx-cell">M2L</td></tr>
+        <tr><td class="bloc-cell">B2.1 — Patrimoine</td><td><span class="comp-id">C4</span><span class="comp-name">Continuité de service</span></td><td class="real-cell">SolarWinds + haute dispo IP télécom</td><td class="ctx-cell">Kyndryl · Bouygues</td></tr>
+        <tr><td class="bloc-cell">B2.1 — Patrimoine</td><td><span class="comp-id">C5</span><span class="comp-name">Gérer sauvegardes</span></td><td class="real-cell">Jobs NCM SolarWinds (configs réseau)</td><td class="ctx-cell">Kyndryl</td></tr>
+        <tr><td class="bloc-cell">B2.1 — Patrimoine</td><td><span class="comp-id">C6</span><span class="comp-name">Règles d'utilisation</span></td><td class="real-cell">Audit comptes & droits GLPI</td><td class="ctx-cell">M2L</td></tr>
+        <tr><td class="bloc-cell">B2.2 — Incidents</td><td><span class="comp-id">C7</span><span class="comp-name">Collecter demandes</span></td><td class="real-cell">Ticketing GLPI + OTRS</td><td class="ctx-cell">M2L · Nawfel (2025)</td></tr>
+        <tr><td class="bloc-cell">B2.2 — Incidents</td><td><span class="comp-id">C8</span><span class="comp-name">Traiter réseau/système</span></td><td class="real-cell">FortiManager + routeurs/switches</td><td class="ctx-cell">Kyndryl · Bouygues</td></tr>
+        <tr><td class="bloc-cell">B2.2 — Incidents</td><td><span class="comp-id">C9</span><span class="comp-name">Traiter applicatif</span></td><td class="real-cell">Incidents Windows + Microsoft 365</td><td class="ctx-cell">M2L · Nawfel</td></tr>
+        <tr><td class="bloc-cell">B2.3 — En ligne</td><td><span class="comp-id">C10</span><span class="comp-name">Valoriser image</span></td><td class="real-cell">Profil LinkedIn — Adyan Jeffali</td><td class="ctx-cell">Continu</td></tr>
+        <tr><td class="bloc-cell">B2.3 — En ligne</td><td><span class="comp-id">C11</span><span class="comp-name">Référencer services</span></td><td class="real-cell">GitHub adyanjeffali (9 repos)</td><td class="ctx-cell">Continu</td></tr>
+        <tr><td class="bloc-cell">B2.3 — En ligne</td><td><span class="comp-id">C12</span><span class="comp-name">Évolution site Web</span></td><td class="real-cell">Portfolio BTS sur GitHub Pages</td><td class="ctx-cell">Projet personnel</td></tr>
+        <tr><td class="bloc-cell">B2.4 — Projet</td><td><span class="comp-id">C13</span><span class="comp-name">Analyser objectifs</span></td><td class="real-cell">Hackathon EFREI + projet réseau IP</td><td class="ctx-cell">EFREI · Bouygues</td></tr>
+        <tr><td class="bloc-cell">B2.4 — Projet</td><td><span class="comp-id">C14</span><span class="comp-name">Planifier activités</span></td><td class="real-cell">Kanban Trello (Hackathon)</td><td class="ctx-cell">Hackathon EFREI</td></tr>
+        <tr><td class="bloc-cell">B2.4 — Projet</td><td><span class="comp-id">C15</span><span class="comp-name">Évaluer indicateurs</span></td><td class="real-cell">Dashboard SolarWinds (KPI réseau)</td><td class="ctx-cell">Kyndryl</td></tr>
+        <tr><td class="bloc-cell">B2.5 — Service</td><td><span class="comp-id">C16</span><span class="comp-name">Tests d'intégration</span></td><td class="real-cell">Validation GLPI déployé</td><td class="ctx-cell">M2L</td></tr>
+        <tr><td class="bloc-cell">B2.5 — Service</td><td><span class="comp-id">C17</span><span class="comp-name">Déployer service</span></td><td class="real-cell">Déploiement FortiManager Fortinet</td><td class="ctx-cell">Kyndryl</td></tr>
+        <tr><td class="bloc-cell">B2.5 — Service</td><td><span class="comp-id">C18</span><span class="comp-name">Accompagner utilisateurs</span></td><td class="real-cell">Formation GLPI + support N1</td><td class="ctx-cell">M2L · Nawfel</td></tr>
+        <tr><td class="bloc-cell">B2.6 — Pro</td><td><span class="comp-id">C19</span><span class="comp-name">Environnement d'apprentissage</span></td><td class="real-cell">TryHackMe (Top 85%, 4 rooms)</td><td class="ctx-cell">Continu 2024-2026</td></tr>
+        <tr><td class="bloc-cell">B2.6 — Pro</td><td><span class="comp-id">C20</span><span class="comp-name">Veille</span></td><td class="real-cell">ANSSI · NVD · Fortinet PSIRT · CTF</td><td class="ctx-cell">Continu</td></tr>
+        <tr><td class="bloc-cell">B2.6 — Pro</td><td><span class="comp-id">C21</span><span class="comp-name">Identité pro</span></td><td class="real-cell">LinkedIn + GitHub + Portfolio</td><td class="ctx-cell">Continu</td></tr>
+        <tr><td class="bloc-cell">B2.6 — Pro</td><td><span class="comp-id">C22</span><span class="comp-name">Projet pro</span></td><td class="real-cell">Alternance Kyndryl + Cycle Ingénieur</td><td class="ctx-cell">2025-2026+</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="synth-actions">
+    <a href="Tableau_Synthese_E5_Jeffali_Adyan.xlsx" download class="btn btn-primary">📊 Télécharger le tableau (Excel)</a>
+    <a href="epreuve-e5.html" class="btn btn-outline">→ Voir le détail des 22 compétences</a>
   </div>
 
   <div class="bts-link-wrap">

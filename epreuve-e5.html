@@ -103,7 +103,7 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
     <div class="stats">
       <div class="stat"><div class="num">22</div><div class="lbl2">Comp&eacute;tences</div></div>
       <div class="stat"><div class="num">6</div><div class="lbl2">Cat&eacute;gories</div></div>
-      <div class="stat"><div class="num">4</div><div class="lbl2">Entreprises</div></div>
+      <div class="stat"><div class="num">3</div><div class="lbl2">Entreprises</div></div>
     </div>
     <div class="download-row">
       <a href="Tableau_Synthese_E5_Jeffali_Adyan.xlsx" class="btn-download" download>
@@ -134,9 +134,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C1')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C1')">
         <div class="badge"><span class="dot"></span>C1 &middot; Valid&eacute;e</div>
         <h3>Recensement et identification des ressources numériques</h3>
-        <p>Inventaire du parc informatique M2L via GLPI — 7 ordinateurs classés par entité sportive.</p>
+        <p>Inventaire du parc informatique M2L via GLPI &amp; recensement complet du parc chez Nawfel Corporation (stage 2025).</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Inventaire parc GLPI — M2L</span>
+          <span class="real">&rarr; Inventaire GLPI M2L &amp; Parc Nawfel</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -198,9 +198,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C7')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C7')">
         <div class="badge"><span class="dot"></span>C7 &middot; Valid&eacute;e</div>
         <h3>Collecte, suivi et orientation des demandes</h3>
-        <p>Gestion du cycle complet des tickets GLPI : ouverture, priorisation, affectation et suivi.</p>
+        <p>Gestion du cycle complet des tickets via GLPI (M2L) &amp; OTRS chez Nawfel Corporation — ouverture, priorisation, affectation, suivi.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Ticketing GLPI — M2L</span>
+          <span class="real">&rarr; Ticketing GLPI M2L &amp; OTRS Nawfel</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -327,9 +327,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C18')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C18')">
         <div class="badge"><span class="dot"></span>C18 &middot; Valid&eacute;e</div>
         <h3>Accompagnement des utilisateurs dans la mise en place d'un service</h3>
-        <p>Formation et accompagnement des utilisateurs M2L à l'utilisation de GLPI.</p>
+        <p>Formation des utilisateurs M2L à GLPI &amp; support N1 quotidien des collaborateurs Nawfel Corporation via OTRS.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Formation utilisateurs GLPI — M2L</span>
+          <span class="real">&rarr; Formation GLPI M2L &amp; Support N1 Nawfel</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -355,9 +355,9 @@ nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 30px;display:fl
       <div class="comp-card" onclick="openModal('C20')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('C20')">
         <div class="badge"><span class="dot"></span>C20 &middot; Valid&eacute;e</div>
         <h3>Veille informationnelle — outils et stratégies</h3>
-        <p>Pratique des CTF via Root Me — 100 points, 8 challenges résolus, classement national.</p>
+        <p>Veille cybersécurité structurée : ANSSI/CERT-FR, NVD, Fortinet PSIRT, The Hacker News &amp; pratique CTF sur Root Me et TryHackMe.</p>
         <div class="arrow-row">
-          <span class="real">&rarr; Root Me — adyan94cyber</span>
+          <span class="real">&rarr; Veille cybersécurité — sources &amp; CTF</span>
           <span class="arr">&#x2192;</span>
         </div>
       </div>
@@ -429,11 +429,11 @@ const DATA = {
   "C1": {
     badge: "C1 · Validée",
     titre: "Recensement et identification des ressources numériques",
-    realisation: "Inventaire parc GLPI — M2L",
+    realisation: "Inventaire GLPI M2L & Parc Nawfel Corporation",
     img: IMG["glpi_inv"],
-    situation: ["Inventaire de 7 ordinateurs : PC-M2L-BASKET-001, PC-M2L-FOOT-001, SRV-M2L-DC01...", "Classification par entité sportive : Basket, Football, Tennis, Natation, Athlétisme, Handball", "Documentation des modèles, OS et localisations"],
-    technos: ["GLPI 11.0.7 — Gestionnaire Libre de Parc Informatique", "Dell OptiPlex 7090, HP ProDesk 400 G7, Lenovo ThinkCentre", "Windows 11, Windows 10, Debian 12, Windows Server 2022"],
-    validee: ["Recenser et identifier les équipements", "Catégoriser par entité organisationnelle", "Documenter le parc informatique"]
+    situation: ["M2L : Inventaire de 7 ordinateurs dans GLPI (PC-M2L-BASKET-001, SRV-M2L-DC01...) classés par entité sportive (Basket, Football, Tennis, Natation, Athlétisme, Handball)", "Nawfel Corporation (stage mai-juin 2025) : recensement complet du parc informatique mixte Windows 10/11 et Linux et mise à jour du référentiel de gestion des stocks", "Documentation des modèles, OS, localisations et caractéristiques techniques des équipements"],
+    technos: ["GLPI 11.0.7 — Gestionnaire Libre de Parc Informatique (M2L)", "Référentiel d\'inventaire — Nawfel Corporation", "Dell OptiPlex 7090, HP ProDesk 400 G7, Lenovo ThinkCentre — Windows 11/10, Debian 12, Windows Server 2022"],
+    validee: ["Recenser et identifier les équipements (M2L et Nawfel)", "Catégoriser par entité organisationnelle ou par usage", "Documenter le parc informatique sur deux contextes différents"]
   },
   "C2": {
     badge: "C2 · Validée",
@@ -483,11 +483,11 @@ const DATA = {
   "C7": {
     badge: "C7 · Validée",
     titre: "Collecte, suivi et orientation des demandes",
-    realisation: "Ticketing GLPI — M2L",
+    realisation: "Ticketing GLPI M2L & OTRS Nawfel Corporation",
     img: IMG["glpi_tix"],
-    situation: ["4 tickets gérés avec statuts différents : Nouveau, En cours (assigned), Résolu", "Ticket #1 : \"Imprimante Basket hors ligne\" — Haute priorité", "Ticket #2 : \"Accès réseau impossible Tennis\" — Moyenne, assigné à jeffali.adyan"],
-    technos: ["GLPI — module Assistance / Tickets", "Priorisation : High, Medium — statuts : New, Processing, Solved", "OTRS chez Nawfel Corporation (stage 2025)"],
-    validee: ["Ouvrir et catégoriser les demandes", "Affecter au bon technicien selon la priorité", "Suivre l\'avancement jusqu\'à la clôture"]
+    situation: ["M2L : 4 tickets gérés dans GLPI avec statuts différents (Nouveau, En cours, Résolu) — ex : \"Imprimante Basket hors ligne\" priorité haute, \"Accès réseau Tennis impossible\" assigné à jeffali.adyan", "Nawfel Corporation (stage mai-juin 2025) : gestion et priorisation quotidienne des tickets via OTRS, support niveau 1 et orientation vers les équipes spécialisées", "Application des bonnes pratiques de ticketing : catégorisation, affectation, escalade, suivi jusqu\'à clôture"],
+    technos: ["GLPI — module Assistance / Tickets (M2L)", "OTRS — outil de ticketing professionnel (Nawfel Corporation)", "Priorisation : High, Medium, Low — workflow : New, Processing, Solved"],
+    validee: ["Ouvrir et catégoriser les demandes (GLPI et OTRS)", "Affecter au bon technicien selon la priorité", "Suivre l\'avancement jusqu\'à la clôture en environnement professionnel"]
   },
   "C8": {
     badge: "C8 · Validée",
@@ -582,11 +582,11 @@ const DATA = {
   "C18": {
     badge: "C18 · Validée",
     titre: "Accompagnement des utilisateurs dans la mise en place d\'un service",
-    realisation: "Formation utilisateurs GLPI — M2L",
+    realisation: "Formation GLPI M2L & Support N1 Nawfel Corporation",
     img: null,
-    situation: ["Formation des 6 utilisateurs M2L : création de tickets, consultation de l\'inventaire", "Guide d\'utilisation GLPI fourni : procédures de demande, suivi, clôture de ticket", "Support niveau 1 chez Nawfel Corporation : accompagnement quotidien des utilisateurs (OTRS)"],
-    technos: ["GLPI — interface utilisateur finale", "OTRS — outil de ticketing Nawfel Corporation", "Documentation et guides pratiques"],
-    validee: ["Former les utilisateurs à un nouvel outil", "Créer des procédures d\'utilisation", "Assurer le support post-déploiement"]
+    situation: ["M2L : formation des 6 utilisateurs à GLPI — création de tickets, consultation de l\'inventaire, procédures de demande/suivi/clôture", "Nawfel Corporation (stage mai-juin 2025) : support niveau 1 quotidien des collaborateurs — accompagnement à l\'utilisation des outils Microsoft 365 et résolution des incidents bureautique via OTRS", "Rédaction et diffusion d\'un guide d\'utilisation GLPI à destination des utilisateurs M2L"],
+    technos: ["GLPI — interface utilisateur finale et formation (M2L)", "OTRS — outil de ticketing et accompagnement utilisateur (Nawfel Corporation)", "Microsoft 365 — support bureautique et accompagnement"],
+    validee: ["Former les utilisateurs à un nouvel outil (M2L)", "Accompagner les utilisateurs au quotidien en environnement pro (Nawfel)", "Créer des procédures et guides d\'utilisation"]
   },
   "C19": {
     badge: "C19 · Validée",
@@ -600,11 +600,11 @@ const DATA = {
   "C20": {
     badge: "C20 · Validée",
     titre: "Veille informationnelle — outils et stratégies",
-    realisation: "Root Me — adyan94cyber",
+    realisation: "Veille cybersécurité structurée — sources & pratique CTF",
     img: IMG["rootme"],
-    situation: ["Profil Root Me : adyan94cyber — 100 points, 8 challenges résolus, classement #134385 FR", "Pratique régulière de Capture The Flag (CTF) pour la veille sécurité", "Suivi de l\'actualité cybersécurité : nouvelles vulnérabilités, techniques d\'attaque"],
-    technos: ["Root Me — plateforme de challenges sécurité", "CTF — Capture The Flag", "ANSSI, NVD, The Hacker News — veille actualité"],
-    validee: ["Réaliser une veille technologique active", "Pratiquer les nouvelles techniques de sécurité", "Se maintenir à jour sur les vulnérabilités"]
+    situation: ["Sujet de veille : Cybersécurité des infrastructures critiques (en lien direct avec mon alternance Kyndryl)", "Sources officielles consultées quotidiennement : ANSSI/CERT-FR (bulletins d\'alerte), NVD (CVE critiques Fortinet/Cisco/Juniper), Fortinet PSIRT (advisories FortiGate), The Hacker News (techniques d\'attaque, ransomwares, APT)", "Pratique active : Root Me (adyan94cyber — 100 pts, 8 challenges) et TryHackMe (adyan.jeff — Top 85%, 4 rooms : Red Team, Offensive Security, Defensive Security, Careers in Cyber)"],
+    technos: ["Sources officielles : ANSSI / CERT-FR, NVD, Fortinet PSIRT", "Médias spécialisés : The Hacker News, articles cybersécurité", "Plateformes pratiques : Root Me, TryHackMe — CTF francophone et international"],
+    validee: ["Mettre en place une stratégie de veille structurée (sources officielles + médias + pratique)", "Suivre quotidiennement les vulnérabilités critiques affectant les équipements administrés", "Pratiquer en environnement contrôlé pour valider la veille théorique"]
   },
   "C21": {
     badge: "C21 · Validée",
