@@ -1,134 +1,379 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Épreuve E6 SISR – Adyan Jeffali</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adyan Jeffali — Épreuve E6 SISR · Administration des systèmes et des réseaux</title>
+<meta name="description" content="Épreuve E6 BTS SIO SISR — Adyan Jeffali. Deux réalisations professionnelles : Active Directory M2L et GLPI ITSM. Administration des systèmes et des réseaux.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #64748b; --line: #e2e8f0;
+  --accent: #3b82f6; --accent-light: #eff6ff; --accent-dark: #1e40af;
+  --green: #22c55e; --green-light: #f0fdf4;
+  --orange: #f97316; --red: #ef4444;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* NAVBAR */
+nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 14px 30px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: 700; font-size: 18px; color: var(--text); letter-spacing: 0.5px; }
+.brand span { color: var(--accent); }
+.nav-links { display: flex; gap: 22px; font-size: 13px; }
+.nav-links a { color: var(--muted); transition: color 0.2s; }
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); font-weight: 600; }
+.nav-cta { background: var(--accent); color: white !important; padding: 7px 16px; border-radius: 7px; font-weight: 500; transition: all 0.2s; }
+.nav-cta:hover { background: var(--accent-dark); }
+.menu-toggle { display: none; background: none; border: none; font-size: 22px; color: var(--text); cursor: pointer; }
+
+/* PAGE HERO */
+.page-hero { padding: 70px 20px 50px; max-width: 1100px; margin: 0 auto; text-align: center; position: relative; }
+.page-hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 90%; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+.page-hero .hero-tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 1px; margin-bottom: 18px; text-transform: uppercase; }
+.page-hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 14px; }
+.page-hero h1 em { color: var(--accent); font-style: normal; }
+.page-hero p { color: var(--muted); font-size: 16px; max-width: 700px; margin: 0 auto; }
+
+.hero-stats { display: flex; gap: 40px; justify-content: center; margin-top: 35px; flex-wrap: wrap; }
+.hero-stat .num { font-size: 1.8rem; font-weight: 700; color: var(--accent); line-height: 1; }
+.hero-stat .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 6px; }
+
+/* SECTIONS */
+section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
+.section-label { font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.2; }
+.section-title em { color: var(--accent); font-style: normal; }
+.section-desc { color: var(--muted); font-size: 15px; max-width: 750px; margin-bottom: 30px; }
+
+/* BTN */
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 8px; font-weight: 500; font-size: 14px; transition: all 0.25s; cursor: pointer; border: none; }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3); }
+.btn-outline { background: white; color: var(--text); border: 1px solid var(--line); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* OBJECTIFS CARD */
+.objectifs-card { background: linear-gradient(135deg, var(--accent-light) 0%, #f0f9ff 100%); border: 1px solid #dbeafe; border-radius: 16px; padding: 32px; margin-top: 16px; }
+.objectifs-card p { color: var(--text); font-size: 15px; margin-bottom: 18px; }
+.objectifs-card p strong { color: var(--accent-dark); font-weight: 600; }
+.objectifs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px; }
+.obj-item { background: white; padding: 16px 18px; border-radius: 10px; border-left: 3px solid var(--accent); display: flex; gap: 12px; align-items: flex-start; }
+.obj-item .num { background: var(--accent); color: white; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.obj-item .txt { font-size: 13px; color: var(--text); line-height: 1.5; font-weight: 500; }
+
+/* RÉALISATION CARD */
+.real-meta { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 22px; padding: 14px 18px; background: white; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; }
+.real-meta-item { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+.real-meta-item strong { color: var(--text); font-weight: 600; }
+.real-meta-item .ico { color: var(--accent); }
+
+.real-card { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 32px; margin-top: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+.real-section { margin-bottom: 26px; }
+.real-section:last-child { margin-bottom: 0; }
+.real-section h3 { font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.real-section p { color: var(--text); font-size: 14px; margin-bottom: 12px; line-height: 1.7; }
+.real-section p:last-child { margin-bottom: 0; }
+.real-section p strong { color: var(--text); font-weight: 600; }
+
+.real-list { list-style: none; }
+.real-list li { font-size: 13px; color: var(--text); padding: 7px 0 7px 22px; position: relative; line-height: 1.6; }
+.real-list li::before { content: '▸'; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+.real-list li strong { color: var(--accent-dark); font-weight: 600; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: var(--accent-light); color: var(--accent); font-size: 12px; padding: 5px 12px; border-radius: 6px; font-weight: 500; border: 1px solid #dbeafe; }
+
+.real-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+.infra-note { background: #fff7ed; border-left: 3px solid var(--orange); padding: 12px 16px; border-radius: 8px; margin-top: 12px; font-size: 13px; color: #7c2d12; }
+.infra-note strong { color: var(--orange); }
+
+/* COMPÉTENCES GRID */
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.comp-card-e6 { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 20px; transition: all 0.25s; display: flex; gap: 14px; align-items: flex-start; }
+.comp-card-e6:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(59, 130, 246, 0.08); }
+.comp-card-e6 .ico { width: 38px; height: 38px; background: var(--accent-light); color: var(--accent); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.comp-card-e6 .txt { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.5; }
+
+/* INFO CARD (candidate info) */
+.info-block { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; background: white; border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin-bottom: 20px; }
+.info-item { display: flex; flex-direction: column; gap: 4px; }
+.info-item .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.info-item .val { font-size: 14px; color: var(--text); font-weight: 600; }
+
+/* FOOTER */
+footer { background: var(--text); color: rgba(255, 255, 255, 0.7); padding: 40px 20px; text-align: center; font-size: 13px; }
+footer strong { color: white; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
+  .nav-links.open { display: flex; position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; background: white; padding: 18px 30px; border-top: 1px solid var(--line); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); }
+  section { padding: 40px 18px; }
+  .page-hero { padding: 50px 18px 40px; }
+  .real-card { padding: 22px; }
+  .objectifs-card { padding: 22px; }
+  .real-meta { flex-direction: column; gap: 8px; }
+}
+</style>
 </head>
-<body><nav>
-  <div class="nav-wrap">
-    <a class="nav-logo" href="index.html">Adyan <span>Jeffali</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html" >Accueil</a></li>
-      <li><a href="bts-sio.html" >BTS SIO</a></li>
-      <li><a href="experiences.html" >Entreprise</a></li>
-      <li><a href="e5.html" >Épreuve E5</a></li>
-      <li><a href="e6.html" class="active">Épreuve E6</a></li>
-      <li><a href="veille.html" >Veille Techno</a></li>
-      <li><a href="projet.html" >Projet perso</a></li>
-    </ul>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">ADYAN<span>.</span></a>
+  <button class="menu-toggle" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+  <div class="nav-links" id="nl">
+    <a href="index.html#about">À propos</a>
+    <a href="index.html#bts">BTS</a>
+    <a href="index.html#skills">Compétences</a>
+    <a href="index.html#parcours">Parcours</a>
+    <a href="index.html#projets">Projets</a>
+    <a href="index.html#veille">Veille</a>
+    <a href="epreuve-e5.html">C1→C22</a>
+    <a href="e6.html" class="active">E6</a>
+    <a href="index.html#contact" class="nav-cta">Contact</a>
   </div>
 </nav>
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <span class="eyebrow">Épreuve E6 – SISR</span>
-    <h1>Administration des systèmes et des réseaux</h1>
-    <p>Deux réalisations professionnelles sur infrastructure réseau et ITSM</p>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-tag">Épreuve E6 · SISR · Bloc 3</div>
+  <h1>Administration des <em>systèmes & réseaux.</em></h1>
+  <p>Deux réalisations professionnelles sur infrastructure réseau et ITSM, validant le bloc 3 du BTS SIO option SISR. Épreuve pratique et orale de 40 minutes (+ 1h30 de préparation).</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">2</div><div class="lbl">Réalisations pro</div></div>
+    <div class="hero-stat"><div class="num">3</div><div class="lbl">Compétences clés</div></div>
+    <div class="hero-stat"><div class="num">40 min</div><div class="lbl">Oral + 1h30 prépa</div></div>
   </div>
-</div>
+</section>
 
-<main>
+<!-- INFOS CANDIDAT -->
+<section style="padding-top: 20px;">
+  <div class="info-block">
+    <div class="info-item"><span class="lbl">Candidat</span><span class="val">Adyan JEFFALI</span></div>
+    <div class="info-item"><span class="lbl">N° candidat</span><span class="val">2248193897</span></div>
+    <div class="info-item"><span class="lbl">Session</span><span class="val">2026</span></div>
+    <div class="info-item"><span class="lbl">Lieu</span><span class="val">EFREI Paris</span></div>
+    <div class="info-item"><span class="lbl">Période</span><span class="val">2025 — 2026</span></div>
+    <div class="info-item"><span class="lbl">Modalité</span><span class="val">En équipe</span></div>
+  </div>
+</section>
 
-  <section style="margin-bottom:2rem">
-    <p class="label">Objectifs de l'épreuve</p>
-    <div class="card">
-      <p>L'épreuve E6 option SISR s'appuie sur deux réalisations professionnelles. Elle évalue les compétences du bloc « Administration des systèmes et des réseaux » et prend la forme d'une épreuve pratique et orale de 40 minutes (+ 1h30 de préparation).</p>
-      <ul class="missions" style="margin-top:.5rem">
-        <li>Concevoir une solution d'infrastructure réseau</li>
-        <li>Installer, tester et déployer une solution d'infrastructure réseau</li>
-        <li>Exploiter, dépanner et superviser une infrastructure réseau</li>
+<!-- OBJECTIFS DE L'ÉPREUVE -->
+<section style="padding-top: 30px;">
+  <div class="section-label">// 01 — Objectifs de l'épreuve</div>
+  <h2 class="section-title">L'épreuve <em>E6 SISR.</em></h2>
+
+  <div class="objectifs-card">
+    <p>L'épreuve E6 option SISR s'appuie sur <strong>deux réalisations professionnelles</strong>. Elle évalue les compétences du bloc « <strong>Administration des systèmes et des réseaux</strong> » et prend la forme d'une épreuve pratique et orale de 40 minutes (+ 1h30 de préparation).</p>
+    <div class="objectifs-grid">
+      <div class="obj-item"><div class="num">1</div><div class="txt">Concevoir une solution d'infrastructure réseau</div></div>
+      <div class="obj-item"><div class="num">2</div><div class="txt">Installer, tester et déployer une solution d'infrastructure réseau</div></div>
+      <div class="obj-item"><div class="num">3</div><div class="txt">Exploiter, dépanner et superviser une solution d'infrastructure réseau</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉALISATION 1 -->
+<section>
+  <div class="section-label">// 02 — Réalisation N°1</div>
+  <h2 class="section-title">Active Directory <em>M2L.</em></h2>
+  <p class="section-desc">Gestion unifiée des utilisateurs et des ressources réseaux en s'appuyant sur le protocole LDAP — Maison des Ligues (M2L).</p>
+
+  <div class="real-meta">
+    <div class="real-meta-item"><span class="ico">📅</span> <strong>Période :</strong> 2025 — 2026</div>
+    <div class="real-meta-item"><span class="ico">📍</span> <strong>Lieu :</strong> EFREI Paris</div>
+    <div class="real-meta-item"><span class="ico">👥</span> <strong>Modalité :</strong> En équipe</div>
+  </div>
+
+  <div class="real-card">
+    <div class="real-section">
+      <h3>📋 Contexte</h3>
+      <p>Dans le cadre de ses missions d'accompagnement des ligues sportives, la <strong>M2L (Maison des Ligues)</strong> doit moderniser son infrastructure. L'objectif de ce projet est de consolider l'administration des accès aux ressources en intégrant un domaine LDAP. Ce système gère de manière centralisée les habilitations (comptes et groupes). Pour prémunir l'annuaire contre les pannes, une solution de tolérance aux pannes (haute disponibilité) est également implémentée.</p>
+      <p>L'<strong>Active Directory</strong> est un annuaire LDAP (Lightweight Directory Access Protocol) pour les systèmes Windows. Il centralise deux fonctionnalités essentielles : <strong>l'identification</strong> et <strong>l'authentification</strong> des utilisateurs au sein du SI.</p>
+    </div>
+
+    <div class="real-section">
+      <h3>🎯 Objectifs atteints</h3>
+      <ul class="real-list">
+        <li>Garantir une <strong>authentification unique et sécurisée</strong> pour l'ensemble des usagers en s'appuyant sur l'annuaire</li>
+        <li>Automatiser l'application des règles de sécurité sur le parc informatique par le biais des <strong>stratégies de groupe (GPO)</strong></li>
+        <li>Centraliser l'administration de l'ensemble des composants du réseau (identités, machines, serveurs, partages de fichiers et périphériques d'impression)</li>
+        <li>Assurer la <strong>distribution automatisée</strong> des applications et outils logiciels indispensables aux activités quotidiennes des collaborateurs</li>
+        <li>Assurer la <strong>continuité de service</strong>, les performances et la haute disponibilité grâce à une architecture multisite</li>
       </ul>
     </div>
-  </section>
 
-  <section style="margin-bottom:2rem">
-    <p class="label">Projet 1 — Installation et configuration d'un annuaire Active Directory</p>
-    <div class="sp-card">
-      <div class="sp-body">
-        <p>La M2L (Maison des Ligues) accompagne diverses ligues sportives régionales. Pour centraliser et sécuriser la gestion des accès, nous avons déployé un annuaire LDAP sous Windows Server 2022. Chaque collaborateur s'authentifie pour accéder aux ressources appropriées à son profil.</p>
-        <p>L'Active Directory est un annuaire LDAP (Lightweight Directory Access Protocol) pour les systèmes Windows. Il centralise deux fonctionnalités essentielles : <strong>l'identification</strong> et <strong>l'authentification</strong> des utilisateurs au sein du SI.</p>
-        <p><strong>Objectifs atteints :</strong></p>
-        <ul class="missions">
-          <li>Garantir la connexion et l'authentification centralisée des utilisateurs</li>
-          <li>Sécuriser les ressources et les accès selon les besoins de chaque profil</li>
-          <li>Assurer la haute disponibilité via une architecture multisite</li>
-          <li>Automatiser les stratégies de sécurité (GPO) sur le parc informatique</li>
-        </ul>
-        <p style="margin-top:.75rem"><strong>Déroulement de l'implémentation :</strong></p>
-        <ul class="missions">
-          <li>Déploiement du rôle Active Directory Domain Services (AD DS) sur Windows Server 2022 Datacenter</li>
-          <li>Mise en service et paramétrage des rôles réseau : DNS et DHCP</li>
-          <li>Création de 7 Unités d'Organisation (UO) représentant les zones de la M2L</li>
-          <li>Intégration des objets du domaine : comptes, postes, groupes de sécurité</li>
-          <li>Élaboration et application des GPO sur le parc</li>
-        </ul>
-        <div class="chips" style="margin-top:.75rem">
-          <span class="chip">Windows Server 2022</span>
-          <span class="chip">Active Directory</span>
-          <span class="chip">DNS</span>
-          <span class="chip">DHCP</span>
-          <span class="chip">GPO</span>
-          <span class="chip">Proxmox</span>
-          <span class="chip">Cisco 4300</span>
-        </div>
-        <div style="margin-top:.75rem">
-          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📄 Fiche situation professionnelle</a>
-          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📁 Documentation technique</a>
-        </div>
+    <div class="real-section">
+      <h3>⚙️ Déroulement de l'implémentation</h3>
+      <ul class="real-list">
+        <li>Déploiement du rôle <strong>Active Directory Domain Services (AD DS)</strong> sur Windows Server 2022 Datacenter</li>
+        <li>Mise en service et paramétrage des rôles réseau associés : serveurs <strong>DNS</strong> et <strong>DHCP</strong></li>
+        <li>Structuration de l'annuaire via la création de <strong>7 Unités d'Organisation (UO)</strong> représentant les différentes zones de la M2L</li>
+        <li>Intégration et configuration des objets au sein du domaine (comptes utilisateurs, postes de travail, services et groupes)</li>
+        <li>Définition des droits d'accès et attribution des groupes de sécurité en fonction des spécificités de chaque zone</li>
+        <li>Élaboration, personnalisation et application des <strong>stratégies de groupe (GPO)</strong> sur le parc informatique</li>
+      </ul>
+    </div>
+
+    <div class="real-section">
+      <h3>🏗️ Infrastructure mobilisée</h3>
+      <p><strong>Matériel :</strong> Serveur physique Dell PowerEdge R620 · Routeur Cisco série 4300 · Commutateur Cisco Catalyst série 2960G</p>
+      <p><strong>Environnement :</strong> Plateforme de virtualisation Proxmox · Windows Server 2022 Datacenter · Architecture multisite avec deux contrôleurs de domaine (AD-DNS1 et AD-DNS2) · DMZ privée et DMZ publique gérées via pfSense</p>
+      <div class="infra-note"><strong>📐 Schéma complet</strong> de l'infrastructure (VMs Proxmox, DMZ, AD-DNS redondants, DHCP, pfSense, FTP, SGBD, HAProxy) disponible dans la documentation technique sur Google Drive.</div>
+    </div>
+
+    <div class="real-section">
+      <h3>🔧 Technologies</h3>
+      <div class="chips">
+        <span class="chip">Windows Server 2022</span>
+        <span class="chip">Active Directory</span>
+        <span class="chip">LDAP</span>
+        <span class="chip">DNS</span>
+        <span class="chip">DHCP</span>
+        <span class="chip">GPO</span>
+        <span class="chip">Proxmox</span>
+        <span class="chip">Cisco 4300</span>
+        <span class="chip">Cisco Catalyst 2960G</span>
+        <span class="chip">Dell PowerEdge R620</span>
+        <span class="chip">pfSense</span>
+        <span class="chip">HAProxy</span>
       </div>
     </div>
-  </section>
 
-  <section style="margin-bottom:2rem">
-    <p class="label">Projet 2 — Déploiement de la solution ITSM GLPI</p>
-    <div class="sp-card">
-      <div class="sp-body">
-        <p>La M2L souhaitait mettre en œuvre une solution de gestion du parc informatique et de résolution d'incidents. GLPI (Gestionnaire Libre de Parc Informatique) est une application web permettant la gestion des actifs, des incidents et des demandes d'assistance.</p>
-        <p><strong>Objectifs atteints :</strong></p>
-        <ul class="missions">
-          <li>Permettre aux utilisateurs de créer, modifier et suivre leurs tickets d'assistance</li>
-          <li>Structurer le processus de prise en charge et résolution des incidents</li>
-          <li>Assurer l'inventaire automatisé du parc via OCS Inventory couplé à GLPI</li>
-          <li>Synchroniser GLPI avec l'Active Directory pour l'authentification LDAP</li>
-        </ul>
-        <p style="margin-top:.75rem"><strong>Phases de déploiement :</strong></p>
-        <ul class="missions">
-          <li><strong>Phase 1 — Environnement LAMP :</strong> installation Apache2, PHP, MariaDB sur Debian</li>
-          <li><strong>Phase 2 — Paramétrage GLPI :</strong> création des entités, configuration de la remontée d'inventaire OCS</li>
-          <li><strong>Phase 3 — Synchronisation AD :</strong> interfaçage GLPI avec le contrôleur de domaine, authentification LDAP</li>
-        </ul>
-        <div class="chips" style="margin-top:.75rem">
-          <span class="chip">GLPI</span>
-          <span class="chip">OCS Inventory</span>
-          <span class="chip">Debian Linux</span>
-          <span class="chip">LAMP</span>
-          <span class="chip">LDAP</span>
-          <span class="chip">pfSense</span>
-          <span class="chip">Proxmox</span>
-        </div>
-        <div style="margin-top:.75rem">
-          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📄 Fiche situation professionnelle</a>
-          <a class="doc-link outline" href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank">📁 Documentation technique</a>
-        </div>
+    <div class="real-section">
+      <h3>📁 Documentation</h3>
+      <div class="real-actions">
+        <a href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank" class="btn btn-primary">📄 Fiche descriptive officielle</a>
+        <a href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank" class="btn btn-outline">📁 Documentation technique complète</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <p class="label">Compétences mobilisées</p>
-    <div class="comp-grid">
-      <div class="comp-item">Concevoir une solution d'infrastructure réseau</div>
-      <div class="comp-item">Installer et déployer une solution réseau</div>
-      <div class="comp-item">Exploiter et superviser l'infrastructure</div>
-      <div class="comp-item">Dépanner une infrastructure réseau</div>
-      <div class="comp-item">Gestion des identités (AD/LDAP)</div>
-      <div class="comp-item">Administration système Linux/Windows</div>
+<!-- RÉALISATION 2 -->
+<section>
+  <div class="section-label">// 03 — Réalisation N°2</div>
+  <h2 class="section-title">Solution ITSM <em>GLPI.</em></h2>
+  <p class="section-desc">Déploiement de la solution ITSM GLPI afin d'orchestrer le centre d'assistance (Helpdesk) et de piloter le suivi des requêtes et la résolution des incidents utilisateurs.</p>
+
+  <div class="real-meta">
+    <div class="real-meta-item"><span class="ico">📅</span> <strong>Période :</strong> 2025 — 2026</div>
+    <div class="real-meta-item"><span class="ico">📍</span> <strong>Lieu :</strong> EFREI Paris</div>
+    <div class="real-meta-item"><span class="ico">👥</span> <strong>Modalité :</strong> En équipe</div>
+  </div>
+
+  <div class="real-card">
+    <div class="real-section">
+      <h3>📋 Contexte</h3>
+      <p>Pour maintenir une qualité de service optimale et garantir la haute disponibilité de son système d'information, la <strong>M2L</strong> nécessite le déploiement d'une plateforme centralisée de gestion des services informatiques. L'objectif de cette démarche est double : assurer un <strong>inventaire rigoureux</strong> des configurations du parc matériel et logiciel, et mettre en place un <strong>centre de support (Helpdesk)</strong> performant pour le suivi et la résolution des incidents rencontrés par les collaborateurs.</p>
+      <p><strong>GLPI</strong> (Gestionnaire Libre de Parc Informatique) est une application web permettant la gestion des actifs, des incidents et des demandes d'assistance.</p>
     </div>
-  </section>
 
-</main>
-<footer>© 2025 – Portfolio BTS SIO SISR – Adyan Jeffali</footer>
+    <div class="real-section">
+      <h3>🎯 Objectifs atteints</h3>
+      <ul class="real-list">
+        <li>Fournir aux collaborateurs une <strong>interface intuitive</strong> permettant la création, l'édition et le suivi en temps réel de leurs tickets</li>
+        <li>Structurer et optimiser le processus de prise en charge, de diagnostic et de résolution des dysfonctionnements informatiques par l'équipe support</li>
+        <li>Assurer l'<strong>inventaire automatisé</strong> du parc via OCS Inventory couplé à GLPI</li>
+        <li>Synchroniser GLPI avec l'<strong>Active Directory</strong> pour l'authentification LDAP centralisée</li>
+        <li>Garantir une <strong>traçabilité rigoureuse</strong> des actifs du SI et le suivi du cycle de vie de chaque équipement</li>
+      </ul>
+    </div>
+
+    <div class="real-section">
+      <h3>⚙️ Phases de déploiement</h3>
+      <ul class="real-list">
+        <li><strong>Phase 1 — Préparation de l'environnement LAMP :</strong> actualisation du système, paramétrage des interfaces réseau, installation Apache2, PHP, MariaDB sur Debian</li>
+        <li><strong>Phase 2 — Paramétrage de l'application GLPI :</strong> structuration via création des entités, configuration de la remontée d'inventaire OCS pour la collecte des équipements</li>
+        <li><strong>Phase 3 — Synchronisation avec l'Active Directory :</strong> interfaçage sécurisé de GLPI avec le contrôleur de domaine, automatisation de l'importation des comptes et de l'authentification LDAP</li>
+      </ul>
+    </div>
+
+    <div class="real-section">
+      <h3>📊 Bénéfices apportés</h3>
+      <ul class="real-list">
+        <li><strong>Gestion globale du support :</strong> prise en charge complète du cycle de vie des tickets (ouverture → clôture) avec communication continue aux utilisateurs</li>
+        <li><strong>Pilotage de l'activité (Reporting) :</strong> indicateurs de performance (délais moyens de résolution, volumétrie, typologie des incidents, charge par technicien)</li>
+        <li><strong>Inventaire du SI :</strong> administration centralisée et référencement exhaustif du matériel, accélération des diagnostics</li>
+      </ul>
+    </div>
+
+    <div class="real-section">
+      <h3>🏗️ Infrastructure mobilisée</h3>
+      <p><strong>Matériel :</strong> Serveur DELL PowerEdge R620 · Routeur Cisco 4300 · Commutateur Cisco Catalyst 2960G</p>
+      <p><strong>Environnement :</strong> Hyperviseur Proxmox · Debian Linux · Pile LAMP (Apache2, PHP, MariaDB) · Pare-feu pfSense · GLPI couplé à OCS Inventory · PuTTY pour l'administration distante</p>
+    </div>
+
+    <div class="real-section">
+      <h3>🔧 Technologies</h3>
+      <div class="chips">
+        <span class="chip">GLPI</span>
+        <span class="chip">OCS Inventory</span>
+        <span class="chip">Debian Linux</span>
+        <span class="chip">Apache2</span>
+        <span class="chip">PHP</span>
+        <span class="chip">MariaDB</span>
+        <span class="chip">LAMP</span>
+        <span class="chip">LDAP</span>
+        <span class="chip">pfSense</span>
+        <span class="chip">Proxmox</span>
+        <span class="chip">PuTTY</span>
+      </div>
+    </div>
+
+    <div class="real-section">
+      <h3>📁 Documentation</h3>
+      <div class="real-actions">
+        <a href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank" class="btn btn-primary">📄 Fiche descriptive officielle</a>
+        <a href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank" class="btn btn-outline">📁 Documentation technique complète</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES MOBILISÉES -->
+<section>
+  <div class="section-label">// 04 — Compétences validées</div>
+  <h2 class="section-title">Compétences <em>mobilisées.</em></h2>
+  <p class="section-desc">Les deux réalisations couvrent l'ensemble des compétences du bloc « Administration des systèmes et des réseaux » du référentiel BTS SIO SISR.</p>
+
+  <div class="comp-grid">
+    <div class="comp-card-e6"><div class="ico">🏗️</div><div class="txt">Concevoir une solution d'infrastructure réseau</div></div>
+    <div class="comp-card-e6"><div class="ico">🚀</div><div class="txt">Installer, tester et déployer une solution réseau</div></div>
+    <div class="comp-card-e6"><div class="ico">📊</div><div class="txt">Exploiter et superviser l'infrastructure</div></div>
+    <div class="comp-card-e6"><div class="ico">🔧</div><div class="txt">Dépanner une infrastructure réseau</div></div>
+    <div class="comp-card-e6"><div class="ico">🔐</div><div class="txt">Gestion des identités (AD / LDAP)</div></div>
+    <div class="comp-card-e6"><div class="ico">💻</div><div class="txt">Administration système Linux & Windows</div></div>
+    <div class="comp-card-e6"><div class="ico">🛡️</div><div class="txt">Sécurisation par GPO et pfSense</div></div>
+    <div class="comp-card-e6"><div class="ico">📦</div><div class="txt">Gestion ITSM (GLPI, OCS Inventory)</div></div>
+  </div>
+</section>
+
+<!-- LIENS UTILES -->
+<section style="padding-bottom: 70px;">
+  <div class="section-label">// 05 — Documents officiels</div>
+  <h2 class="section-title">Pour aller <em>plus loin.</em></h2>
+
+  <div class="real-actions" style="margin-top: 16px;">
+    <a href="https://drive.google.com/drive/folders/1UTDTmkJXU7lyG9G1s0PHqdap_vn_SAj4" target="_blank" class="btn btn-primary">📁 Documentation complète (Google Drive)</a>
+    <a href="epreuve-e5.html" class="btn btn-outline">→ Voir l'épreuve E5 (C1→C22)</a>
+    <a href="index.html" class="btn btn-outline">← Retour au portfolio</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <strong>Adyan Jeffali</strong> — Portfolio BTS SIO SISR · EFREI Paris</p>
+  <p style="margin-top: 6px; font-size: 12px; opacity: 0.6;">Épreuve E6 — Administration des systèmes et des réseaux · Session 2026</p>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-links a[href^="index.html#"]').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('nl').classList.remove('open'));
+});
+</script>
 </body>
 </html>
